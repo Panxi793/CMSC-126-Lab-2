@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="/api/placeholder/50/50" alt="Pokéball" class="pokeball-logo">
+                    <span>PokéFolio</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Pokédex</a></li>
+                    <li><a href="#contact">Trainer Card</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch">
+                    <label for="theme-switch">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-title">Hello, I'm <span>Anton Oacan</span></h1>
+                <h2>Pokémon Trainer & Web Developer</h2>
+                <p>I build beautiful, responsive websites with modern technologies.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">View My Pokédex</a>
+                    <a href="#contact" class="btn secondary-btn">View Trainer Card</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="pokeball-shape">
+                    <div class="pokeball-top"></div>
+                    <div class="pokeball-middle"></div>
+                    <div class="pokeball-bottom"></div>
+                    <div class="pokeball-center"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-type fire">Fire</div>
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <div class="skill-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">XP</span>
+                            <div class="xp-bar">
+                                <div class="xp-fill" style="width: 95%"></div>
+                            </div>
+                            <span class="xp-value">95/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-type water">Water</div>
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <div class="skill-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">XP</span>
+                            <div class="xp-bar">
+                                <div class="xp-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="xp-value">90/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-type electric">Electric</div>
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">XP</span>
+                            <div class="xp-bar">
+                                <div class="xp-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="xp-value">85/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-type psychic">Psychic</div>
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <div class="skill-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">XP</span>
+                            <div class="xp-bar">
+                                <div class="xp-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="xp-value">80/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-type grass">Grass</div>
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3>Node.js</h3>
+                    <div class="skill-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">XP</span>
+                            <div class="xp-bar">
+                                <div class="xp-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="xp-value">75/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-type normal">Normal</div>
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <div class="skill-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">XP</span>
+                            <div class="xp-bar">
+                                <div class="xp-fill" style="width: 92%"></div>
+                            </div>
+                            <span class="xp-value">92/100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Pokédex</h2>
+            <div class="pokedex-container">
+                <div class="pokedex-project-card">
+                    <div class="pokedex-screen">
+                        <img src="/api/placeholder/600/400" alt="E-commerce Website">
+                    </div>
+                    <div class="pokedex-info">
+                        <div class="pokedex-led"></div>
+                        <div class="pokedex-data">
+                            <h3>E-commerce Website</h3>
+                            <p>A fully responsive e-commerce platform with product filtering, cart functionality, and secure checkout.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+                            <div class="pokedex-buttons">
+                                <a href="#" class="btn poke-btn">View Demo</a>
+                                <a href="#" class="btn poke-btn secondary-btn">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pokedex-project-card">
+                    <div class="pokedex-screen">
+                        <img src="/api/placeholder/600/400" alt="Task Management App">
+                    </div>
+                    <div class="pokedex-info">
+                        <div class="pokedex-led"></div>
+                        <div class="pokedex-data">
+                            <h3>Task Management App</h3>
+                            <p>A task management application with drag-and-drop functionality, user authentication, and data visualization.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="pokedex-buttons">
+                                <a href="#" class="btn poke-btn">View Demo</a>
+                                <a href="#" class="btn poke-btn secondary-btn">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pokedex-project-card">
+                    <div class="pokedex-screen">
+                        <img src="/api/placeholder/600/400" alt="Portfolio Website">
+                    </div>
+                    <div class="pokedex-info">
+                        <div class="pokedex-led"></div>
+                        <div class="pokedex-data">
+                            <h3>Portfolio Website</h3>
+                            <p>A modern portfolio website showcasing my skills and projects with responsive design and animations.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="pokedex-buttons">
+                                <a href="#" class="btn poke-btn">View Demo</a>
+                                <a href="#" class="btn poke-btn secondary-btn">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="trainer-card">
+                <div class="trainer-info">
+                    <h2 class="section-title">Trainer Card</h2>
+                    <div class="trainer-details">
+                        <div class="trainer-avatar">
+                            <img src="/api/placeholder/150/150" alt="Trainer Avatar">
+                        </div>
+                        <div class="trainer-profile">
+                            <div class="trainer-data">
+                                <h3>Anton Oacan</h3>
+                                <p>Web Developer Trainer</p>
+                                <div class="trainer-stats">
+                                    <div class="trainer-stat">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>anton@example.com</span>
+                                    </div>
+                                    <div class="trainer-stat">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+1 (555) 123-4567</span>
+                                    </div>
+                                    <div class="trainer-stat">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>San Francisco, CA</span>
+                                    </div>
+                                </div>
+                                <div class="trainer-badges">
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer-message">
+                    <h3>Send a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Anton Oacan. All Pokémon Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Theme Toggle
+        document.getElementById('theme-switch').addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
