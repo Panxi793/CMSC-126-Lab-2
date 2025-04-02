@@ -16,7 +16,7 @@
     --light-color: #f3f4f6;
     --text-dark: #1f2937;
     --text-light: #f9fafb;
-    --background: #80E5FF; 
+    --background: #dee1ff; 
     --card-bg: #FFFFFF; 
     --border-color: #e5e7eb;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@
 .dark-mode {
     --primary-color: #CC0000;
     --secondary-color: #304ACA;
-    --background: #111827;
+    --background: #222648;
     --card-bg: #1f2937;
     --text-dark: #f9fafb;
     --text-light: #f3f4f6;
@@ -564,13 +564,38 @@ nav {
 
 .skill-icon {
     background-color: #fff;
-    padding: 20px;
+    padding: 2px;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     border-bottom: 1px solid #ddd;
+}
+
+.logo-container {
+    position: relative;
+    width: calc(100% - 30px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    background: 
+        linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(to bottom,
+            #C0C0C0,
+            #FFFFFF 20%,
+            #C0C0C0 40%,
+            #C0C0C0 60%,
+            #FFFFFF 80%,
+            #C0C0C0
+        ) border-box;
+}
+
+.skill-icon i {
+    font-size: 6rem;
+    color: var(--primary-color);
 }
 
 .skill-icon::before,
@@ -590,11 +615,6 @@ nav {
 
 .skill-icon::after {
     right: 0;
-}
-
-.skill-icon i {
-    font-size: 6rem;
-    color: var(--primary-color);
 }
 
 .skill-description {
