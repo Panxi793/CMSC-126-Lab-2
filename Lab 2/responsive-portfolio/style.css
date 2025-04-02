@@ -553,19 +553,19 @@ nav {
 .card-header .category {
     color: #FF6B3D;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .skill-name {
     background: #f8f8f8;
-    padding: 12px 15px;
+    padding: 8px 15px;
     border-bottom: 1px solid #ddd;
 }
 
 .skill-name h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #000;
     margin: 0;
     font-weight: bold;
@@ -608,11 +608,13 @@ nav {
 
 .skill-description {
     background: #fff;
-    padding: 20px;
-    font-size: 0.9rem;
-    color: #333;
+    padding: 15px;
+    font-size: 0.85rem;
+    color: #666;
     border-top: 1px solid #ddd;
-    min-height: 100px;
+    min-height: 60px;
+    line-height: 1.4;
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
 .skill-stats {
