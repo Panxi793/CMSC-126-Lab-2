@@ -314,18 +314,33 @@
             this.classList.toggle('active');
         });
 
-        // Theme Toggle
+        // Theme Toggle with Enhanced Functionality
         document.getElementById('theme-switch').addEventListener('change', function() {
-        document.body.classList.toggle('dark-mode');
-        
-        // You can add specific actions for the hero background here if needed
-        const heroSection = document.getElementById('home');
-        if (document.body.classList.contains('dark-mode')) {
-            // Additional actions for dark mode if needed
-        } else {
-            // Additional actions for light mode if needed
-        }
-    });
+            // Toggle dark-mode class on body element
+            document.body.classList.toggle('dark-mode');
+            
+            // Save preference to localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Check for saved theme preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user has a saved preference
+            const savedTheme = localStorage.getItem('theme');
+            
+            // Check if user prefers dark mode via system settings
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Apply dark mode if explicitly saved or if system prefers it and no preference is saved
+            if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-switch').checked = true;
+            }
+        });
     </script>
 </body>
 </html>

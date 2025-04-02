@@ -38,21 +38,6 @@
     --hero-bg-image: url('images/background-night.png');
 }
 
-/* Automatically apply dark mode based on system preference */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #CC0000; 
-        --secondary-color: #304ACA;
-        --background: #111827;
-        --card-bg: #1f2937;
-        --text-dark: #f9fafb;
-        --text-light: #f3f4f6;
-        --border-color: #374151;
-        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        --hero-bg-image: url('images/background-day.png');
-    }
-}
-
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -331,6 +316,7 @@ nav {
     position: relative;
     overflow: hidden;
 }
+
 .hero::before {
     content: '';
     position: absolute;
@@ -341,6 +327,10 @@ nav {
     background: linear-gradient(135deg, rgba(238, 21, 21, 0.8) 0%, rgba(59, 76, 202, 0.8) 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     z-index: -1;
+}
+
+.dark-mode .hero::before {
+    background: linear-gradient(135deg, rgba(204, 0, 0, 0.8) 0%, rgba(48, 74, 202, 0.8) 100%);
 }
 
 .hero .container {
@@ -523,7 +513,7 @@ nav {
     border: 8px solid #FFDE00;
     position: relative;
     overflow: hidden;
-    color: var(--text-dark);
+    color: #1e1b4b;
 }
 
 .skill-card:hover {
@@ -595,7 +585,7 @@ nav {
     font-size: 1rem;
     text-align: center;
     margin-bottom: 15px;
-    color: #1f2937;
+    color: inherit;
 }
 
 .skill-stats {
@@ -611,7 +601,7 @@ nav {
 
 .stat-label {
     font-size: 0.6rem;
-    color: #1f2937;
+    color: inherit;
     flex: 0 0 30px;
 }
 
@@ -634,7 +624,7 @@ nav {
 
 .xp-value {
     font-size: 0.6rem;
-    color: #1f2937;
+    color: inherit;
     margin-left: 5px;
 }
 
