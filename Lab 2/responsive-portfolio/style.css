@@ -547,35 +547,43 @@ nav {
 }
 
 /* Type-specific icon colors */
-.skill-card:nth-child(1) .skill-icon i {  /* HTML */
+/* HTML - Grass */
+[data-skill="html"] .skill-icon i {
     color: var(--grass-type);
 }
 
-.skill-card:nth-child(2) .skill-icon i {  /* CSS */
+/* CSS - Fire */
+[data-skill="css"] .skill-icon i {
     color: var(--fire-type);
 }
 
-.skill-card:nth-child(3) .skill-icon i {  /* JavaScript */
+/* JavaScript - Water */
+[data-skill="javascript"] .skill-icon i {
     color: var(--water-type);
 }
 
-.skill-card:nth-child(4) .skill-icon i {  /* React */
+/* React - Electric */
+[data-skill="react"] .skill-icon i {
     color: var(--electric-type);
 }
 
-.skill-card:nth-child(5) .skill-icon i {  /* Python */
+/* Python - Psychic */
+[data-skill="python"] .skill-icon i {
     color: var(--psychic-type);
 }
 
-.skill-card:nth-child(6) .skill-icon i {  /* C */
+/* C - Fighting */
+[data-skill="c"] .skill-icon i {
     color: var(--fighting-type);
 }
 
-.skill-card:nth-child(7) .skill-icon i {  /* C++ */
+/* C++ - Dark */
+[data-skill="cpp"] .skill-icon i {
     color: var(--dark-type);
 }
 
-.skill-card:nth-child(8) .skill-icon i {  /* Node.js */
+/* Node.js - Dragon */
+[data-skill="nodejs"] .skill-icon i {
     color: var(--dragon-type);
 }
 
@@ -1228,13 +1236,21 @@ footer p {
     left: 50%;
     transform: translateX(-50%) scale(0) rotate(0deg);
     z-index: 9999;
-    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-origin: center center;
     width: 300px; /* Adjust based on your needs */
 }
 
 .card-preview-container.active {
     transform: translateX(-50%) scale(1.5) rotate(360deg);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0));
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                filter 0.3s ease;
+}
+
+.card-preview-container.active:hover {
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.4))
+           drop-shadow(0 0 25px rgba(255, 255, 255, 0.2));
 }
 
 .card-preview {
