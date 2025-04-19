@@ -187,6 +187,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    height: 60px;
 }
 
 .logo {
@@ -261,6 +262,9 @@ nav {
 .theme-toggle {
     position: relative;
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .theme-toggle input {
@@ -1085,6 +1089,22 @@ footer p {
 /* Mobile Styles (576px and below) */
 @media (max-width: 576px) {
     /* Typography */
+    .logo {
+        font-size: 1rem;
+    }
+
+    .logo span {
+        font-size: 0.8rem;
+        margin-left: 5px;
+    }
+
+    .pikachu-logo {
+        width: 25px;
+        height: 20px;
+        padding-right: 5px;
+        margin-left: 5px;
+    }
+
     .hero h1 {
         font-size: 1.5rem;
     }
@@ -1097,10 +1117,35 @@ footer p {
         font-size: 1.5rem;
     }
 
+    /* Skills Section */
+    #skills .section-title {
+        margin-top: 40px;
+    }
+
     /* Navigation */
+    nav {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 6px;
+        padding: 8px;
+        z-index: 1001;
+        margin-left: auto;
+    }
+
+    .theme-toggle {
+        position: relative;
+        z-index: 1001;
+        margin-left: 10px;
+    }
+
     .nav-links {
         position: fixed;
-        top: 70px;
+        top: 60px;
         left: 0;
         width: 100%;
         background-color: var(--primary-color);
@@ -1108,20 +1153,16 @@ footer p {
         padding: 20px 0;
         gap: 20px;
         align-items: center;
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         opacity: 0;
         transition: var(--transition);
         z-index: 999;
         border-bottom: 4px solid #000;
     }
-    
+
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
-    }
-    
-    .hamburger {
-        display: flex;
     }
     
     .hamburger.active span:nth-child(1) {
@@ -1168,6 +1209,7 @@ footer p {
         gap: 20px;
     }
 
+    
     .skill-card {
         padding: 15px;
     }
