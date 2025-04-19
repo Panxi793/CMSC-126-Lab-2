@@ -508,158 +508,50 @@ nav {
 }
 
 .skill-card {
-    background: #FFF5D7;
-    border-radius: 15px;
-    padding: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: var(--transition);
-    border: 8px solid #F8D030;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    aspect-ratio: 745/1040;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: var(--transition);
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    filter: brightness(1.1);
 }
 
-.card-header {
-    background: linear-gradient(to right, #e0e0e0, #ffffff);
-    padding: 8px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-}
-
-.card-header .type {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-    font-family: 'Press Start 2P', monospace;
-}
-
-.card-header .category {
-    color: #FF6B3D;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-family: 'Press Start 2P', monospace;
-}
-
-.skill-name {
-    background: #fff;
-    padding: 8px 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.skill-name h3 {
-    font-size: 1.4rem;
-    color: #000;
-    margin: 0;
-    font-weight: bold;
-    font-family: 'Press Start 2P', monospace;
+.card-background {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .skill-icon {
-    background-color: #fff;
-    padding: 2px;
-    height: 200px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    border-bottom: 1px solid #ddd;
-}
-
-.logo-container {
-    position: relative;
-    width: calc(100% - 30px);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid transparent;
-    background: 
-        linear-gradient(#fff, #fff) padding-box,
-        linear-gradient(to bottom,
-            #C0C0C0,
-            #FFFFFF 20%,
-            #C0C0C0 40%,
-            #C0C0C0 60%,
-            #FFFFFF 80%,
-            #C0C0C0
-        ) border-box;
 }
 
 .skill-icon i {
-    font-size: 6rem;
-    color: var(--primary-color);
+    font-size: 7rem;
+    color: white;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
 }
 
-.skill-icon::before,
-.skill-icon::after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    top: 0;
-    bottom: 0;
-    background-image: linear-gradient(0deg, #ccc 1px, transparent 1px);
-    background-size: 100% 5px;
-}
-
-.skill-icon::before {
-    left: 0;
-}
-
-.skill-icon::after {
-    right: 0;
-}
-
-.skill-description {
-    background: #fff;
-    padding: 15px;
-    font-size: 0.85rem;
-    color: #666;
-    border-bottom: 1px solid #ddd;
-    line-height: 1.4;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-
-.skill-stats {
-    background: #fff;
-    padding: 15px;
-    margin-top: auto;
-}
-
-.stat-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    color: #333;
-    font-family: 'Press Start 2P', monospace;
-}
-
-.xp-bar {
-    flex: 1;
-    height: 12px;
-    background-color: #e5e5e5;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid #ccc;
-}
-
-.xp-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 100%);
-    transition: width 1.5s ease-in-out;
+/* Remove old card styles */
+.card-header,
+.skill-name,
+.skill-description,
+.skill-stats,
+.logo-container {
+    display: none;
 }
 
 /* Projects Section - Pokedex Style */
