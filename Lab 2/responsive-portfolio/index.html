@@ -286,7 +286,10 @@
         </div>
     </footer>
 
-    <div class="overlay"></div>
+    <div class="card-preview-overlay"></div>
+    <div class="card-preview-container">
+        <div class="card-preview"></div>
+    </div>
 
     <script>
         // Mobile Navigation Toggle
@@ -305,56 +308,7 @@
             }
         });
 
-        // Card Zoom Functionality
-        const overlay = document.querySelector('.overlay');
-        const skillCards = document.querySelectorAll('.skill-card');
-        let activeCard = null;
-
-        function handleCardClick(e) {
-            const card = e.currentTarget;
-            
-            if (card.classList.contains('zoomed')) {
-                // Zoom out
-                card.classList.remove('zoomed');
-                overlay.classList.remove('active');
-                document.body.classList.remove('zoom-active');
-                activeCard = null;
-            } else {
-                // Zoom in
-                if (activeCard) {
-                    activeCard.classList.remove('zoomed');
-                }
-                card.classList.add('zoomed');
-                overlay.classList.add('active');
-                document.body.classList.add('zoom-active');
-                activeCard = card;
-            }
-        }
-
-        function handleOverlayClick() {
-            if (activeCard) {
-                activeCard.classList.remove('zoomed');
-                overlay.classList.remove('active');
-                document.body.classList.remove('zoom-active');
-                activeCard = null;
-            }
-        }
-
-        // Add click listeners to cards and overlay
-        skillCards.forEach(card => {
-            card.addEventListener('click', handleCardClick);
-        });
-
-        overlay.addEventListener('click', handleOverlayClick);
-
-        // Handle escape key to close zoomed card
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && activeCard) {
-                handleOverlayClick();
-            }
-        });
-
-        // Check for saved theme preference on page load
+        // Check for saved theme preference
         document.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('theme');
             const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -363,6 +317,44 @@
                 document.body.classList.add('dark-mode');
                 document.getElementById('theme-switch').checked = true;
             }
+
+            // Card Preview Animation
+            const skillCards = document.querySelectorAll('.skill-card');
+            const overlay = document.querySelector('.card-preview-overlay');
+            const previewContainer = document.querySelector('.card-preview-container');
+            const preview = document.querySelector('.card-preview');
+
+            function showCardPreview(card) {
+                const cardClone = card.cloneNode(true);
+                preview.innerHTML = '';
+                preview.appendChild(cardClone);
+                
+                overlay.classList.add('active');
+                previewContainer.classList.add('active');
+                
+                document.body.style.overflow = 'hidden';
+            }
+
+            function hideCardPreview() {
+                overlay.classList.remove('active');
+                previewContainer.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            skillCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    showCardPreview(card);
+                });
+            });
+
+            overlay.addEventListener('click', hideCardPreview);
+            
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    hideCardPreview();
+                }
+            });
         });
     </script>
 </body>
