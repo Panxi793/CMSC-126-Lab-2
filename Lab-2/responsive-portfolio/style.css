@@ -589,7 +589,7 @@ nav {
     color: var(--dragon-type);
 }
 
-/* Remove old card styles */
+
 .card-header,
 .skill-name,
 .skill-description,
@@ -767,7 +767,7 @@ nav {
     bottom: 10px;
     background-color: #8BC34A;
     border: 3px solid #333;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
