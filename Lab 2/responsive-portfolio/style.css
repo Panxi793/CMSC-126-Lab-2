@@ -509,18 +509,59 @@ nav {
     padding: 20px;
 }
 
+/* Card Zoom Effect */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 .skill-card {
     position: relative;
     aspect-ratio: 745/1040;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    transition: var(--transition);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
-.skill-card:hover {
+.skill-card.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(360deg) scale(1.5);
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+.skill-card:not(.zoomed):hover {
     transform: translateY(-10px);
     filter: brightness(1.1);
+}
+
+body.zoom-active {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .skill-card.zoomed {
+        transform: translate(-50%, -50%) rotateY(360deg) scale(1.2);
+    }
 }
 
 .card-background {
